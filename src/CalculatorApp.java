@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class CalculatorApp {
-
     public static void main(String[] args) {
 
         String input;
@@ -32,10 +31,9 @@ public class CalculatorApp {
 
 
                     } while (key[0]!="q" || key[0]!="Q");
-
         }
-
     }
+
     //to check user entered correct operator
     private static boolean checkOperator(char operator) {
         if (operator=='+' || operator=='-' || operator=='*' || operator=='/') {
