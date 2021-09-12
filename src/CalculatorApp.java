@@ -1,3 +1,8 @@
+//Make a calculater. Jisme jb tk user q ya Q press ni krta tb tk vo
+//continuously console pe 2 space separated numbers input me maange.
+//Uske baad select krne bole ki +,-,*,/ me se kya krna h. Vo kr k answer
+//ko console pe print krwana hai.
+
 import java.util.Scanner;
 
 public class CalculatorApp {
