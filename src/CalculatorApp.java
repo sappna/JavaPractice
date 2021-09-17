@@ -3,10 +3,13 @@
 //Uske baad select krne bole ki +,-,*,/ me se kya krna h. Vo kr k answer
 //ko console pe print krwana hai.
 
+import java.util.Objects;
 import java.util.Scanner;
 
 public class CalculatorApp {
     public static void main(String[] args) {
+        int num1;
+        int num2;
 
         String input;
         char operator;
@@ -16,12 +19,19 @@ public class CalculatorApp {
         input = take.nextLine();
         String[] key = input.split(" ");
 
-        if(key[0]=="q" || key[0]=="Q") {
-            return ;
+        if(Objects.equals(key[0], "q") || Objects.equals(key[0], "Q")) {
+            System.exit(0);
+
         } else {
                     do {
-                        int num1 = Integer.parseInt(key[0]);
-                        int num2 = Integer.parseInt(key[1]);
+                        try{
+                            num1 = Integer.parseInt(key[0]);
+                            num2 = Integer.parseInt(key[1]);
+
+                        } catch (NumberFormatException ex) {
+                            System.out.println("Invalid Arguments!");
+                            break;
+                        }
 
                         System.out.println("Choose any one from + - * /");
                         operator = take.next().charAt(0);
@@ -35,7 +45,7 @@ public class CalculatorApp {
                         key = input.split(" ");
 
 
-                    } while (key[0]!="q" || key[0]!="Q");
+                    } while (!Objects.equals(key[0], "q") || !Objects.equals(key[0], "Q"));
         }
     }
 
@@ -52,20 +62,18 @@ public class CalculatorApp {
     //to calculate
     private static void calculator(int num1, int num2, char operator) {
 
-        double ans;
+        double ans=0;
         switch (operator) {
-                case '+' : ans = num1+num2;
-                           System.out.println(ans);
+                case '+' : ans = (double) (num1 + num2);
                            break;
-                case '-' : ans = num1-num2;
-                           System.out.println(ans);
+                case '-' : ans = (double) (num1-num2);
                            break;
-                case '*' : ans = num1*num2;
-                           System.out.println(ans);
+                case '*' : ans = (double) (num1*num2);
                            break;
-                case '/' : ans = num1/num2;
-                           System.out.println(ans);
+                case '/' : ans = (double) num1/num2;
+                           break;
         }
+        System.out.println(ans);
     }
 
 }
