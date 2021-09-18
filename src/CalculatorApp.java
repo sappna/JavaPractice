@@ -64,11 +64,11 @@ public class CalculatorApp {
 
         double ans=0;
         switch (operator) {
-                case '+' : ans = (double) (num1 + num2);
+                case '+' : ans = (num1 + num2);
                            break;
-                case '-' : ans = (double) (num1-num2);
+                case '-' : ans = (num1-num2);
                            break;
-                case '*' : ans = (double) (num1*num2);
+                case '*' : ans = ( (double) num1*num2 );
                            break;
                 case '/' : ans = (double) num1/num2;
                            break;
