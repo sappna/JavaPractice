@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CalculatorApp {
     public static void main(String[] args) {
-        int num1;
+        int num1=0;
         int num2;
 
         String input;
